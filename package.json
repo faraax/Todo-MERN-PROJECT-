@@ -6,11 +6,11 @@
   "scripts": {
     "start": "node server.js",
     "server": "nodemon server.js -q",
-    "client":"cd client && npm start",
+    "client": "cd client && npm start",
     "build": "cd client && npm run build",
     "install-client": "cd client && npm install",
     "heroku-postbuild": "npm run install-client && npm run build",
-    "dev":"concurrently -n 'server,client' -c 'red,green' \"nodemon server.js\" \"npm run client\""
+    "dev": "concurrently -n 'server,client' -c 'red,green'  \"nodemon server.js\" \"npm run client\""
   },
   "keywords": [],
   "author": "",
