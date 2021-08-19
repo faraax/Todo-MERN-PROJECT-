@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+#root {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #333;
+  height: 100vh;
+  width: 100vw;
+}
+.form {
+  height: 350px;
+  width: 350px;
+  border-radius: 20px;
+  display: flex;
+}
+.form ul {
+  flex: 1;
+  margin: 20px;
+}
+.form ul li {
+  width: 100%;
+  list-style: none;
+  cursor: pointer;
+  transition: background 0.5s ease;
+  display: flex;
+  height: 35px;
+  background: #AF7EEB;
+  color: #fff;
+  padding: 5px;
+}
+.list {
+  flex: 1;
+}
+.form ul li:hover { 
+  background: #c2a3e9;
+}
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 350px ;
+  height: 50px;
+  background-color: #AF7EEB;
+  margin: 0 0 5px 0;
+  border-radius: 20px 5px;
+  position: relative;
+}
+.lines {
+  transform: rotate(90deg);
+  position: absolute;
+  left: 0;
+  margin: 5px 0 0 10px;
+}
+span {
+  height: 20px;
+  border: 2px solid #fff;
+  background: #fff;
+  border-radius: 5px;
+  margin: 0 5px 0 0;
+}
+span:nth-child(1) {
+  height: 20px;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  margin: 0 5px 0 0;
+}
+span:nth-child(2) {
+  height: 20px;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  margin: 0 5px 0 0;
+}
+.todo { 
+  height: 30px;
+  outline: none;
+  border: none;
+  border-radius: 50px;
+  padding: 5px;
+  margin: 0 0 0 25px;
+}
+.btn { 
+  height: 25px;
+  outline: none;
+  border: 1px solid #fff;
+  border-radius: 50px;
+  padding: 3px 10px;
+  margin-left: 5px;
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.5s ease-in-out;
+}
+.btn:hover {
+  background: #7d30db;
+}
+
+
