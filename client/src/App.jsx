@@ -8,7 +8,7 @@ const App = () => {
   const [list, setToList] = useState({ todo: '' });
 
   const fetchData = async () => {
-    const { data } = await axios.get('http://localhost:5001/api');
+    const { data } = await axios.get('https://merntodoappbyfaraz.herokuapp.com/api');
     return data
   }
 
@@ -23,7 +23,7 @@ const App = () => {
   const onSubmitForm = async (e) => {
     e.preventDefault()
     try {
-      const addToList = await axios.post('http://localhost:5001/api/addtodo', list)
+      await axios.post('https://merntodoappbyfaraz.herokuapp.com/api/addtodo', list)
       // console.log(addToList)
     } catch (err) {
       // console.log('==>', err)
@@ -42,7 +42,7 @@ const App = () => {
   const clearList = async (e) => {
     e.preventDefault()
     try {
-      const deleteAll = await axios.post('http://localhost:5001/api/deleteData');
+      await axios.post('https://merntodoappbyfaraz.herokuapp.com/api/deleteData');
       // console.log(deleteAll);
     } catch (err) {
       console.log(err)
@@ -56,7 +56,7 @@ const App = () => {
       const id = todo;
       id.map(async (data, index) => {
         if (data.todo === name) {
-          const deleteTodo = await axios.delete(`http://localhost:5001/api/${data._id}`);
+          await axios.delete(`https://merntodoappbyfaraz.herokuapp.com/api/${data._id}`);
           // console.log(deleteTodo)
         }
       })
@@ -72,7 +72,7 @@ const App = () => {
       if (data.todo === name) {
         let id = data._id
         try {
-          const updateData = await axios.put(`http://localhost:5001/api/${id}`, { todo: inp });
+          await axios.put(`https://merntodoappbyfaraz.herokuapp.com/api/${id}`, { todo: inp });
           // console.log(updateData)
         } catch (err) {
           console.log(err);
